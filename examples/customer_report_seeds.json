@@ -1,0 +1,8 @@
+[
+  {
+    "prompt": "Load the requested customer dataset, prepare it, and publish the final report to the destination specified by the task."
+  },
+  {
+    "prompt": "Complete the customer reporting workflow from data retrieval through delivery."
+  }
+]

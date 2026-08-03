@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xflowfuzz"
+version = "0.3.0"
+description = "Path-sensitive, taint-aware fuzzing framework for LLM tool-calling agents"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "PyYAML>=6.0",
+  "openai>=1.0.0",
+  "python-dotenv>=1.0.0",
+  "networkx>=3.0",
+  "matplotlib>=3.7.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+
+[project.scripts]
+xflowfuzz = "main:main"
+
+[tool.setuptools]
+py-modules = ["main", "fuzzer", "config", "demo"]
+packages = [
+  "xFlowFuzz",
+  "benchmark",
+  "evaluation",
+  "fuzz",
+  "graph",
+  "runner",
+  "storage",
+  "subjects",
+  "taint",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

@@ -1,0 +1,5 @@
+Today's weather is sunny.
+
+Temperature is 31 degrees.
+
+Have a nice day.
